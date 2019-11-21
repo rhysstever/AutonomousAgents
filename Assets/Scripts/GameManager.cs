@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 			newHuman = CreateHuman(
 				new Vector3(
 					Random.Range(-bounds, bounds),
-					humanPrefab.GetComponentInChildren<SkinnedMeshRenderer>().bounds.size.y / 2,
+					0.0f,
 					Random.Range(-bounds, bounds)));
 		}
 
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
 			newZombie = CreateZombie(
 				new Vector3(
 					Random.Range(-bounds, bounds),
-					zombiePrefab.GetComponentInChildren<SkinnedMeshRenderer>().bounds.size.y / 2,
+					0.0f,
 					Random.Range(-bounds, bounds)));
 		}
 
@@ -230,7 +230,7 @@ public class GameManager : MonoBehaviour
 			newZombie = CreateZombie(
 				new Vector3(
 					human.transform.position.x,
-					zombiePrefab.GetComponentInChildren<SkinnedMeshRenderer>().bounds.size.y / 2,
+					0.0f,
 					human.transform.position.z),
 				human.transform.rotation);
 			zombies.Add(newZombie);
